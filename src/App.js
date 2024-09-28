@@ -9,9 +9,15 @@ function App() {
   const [javascript, setJavaScript] = useState('');
 
   return (
-    <div>
-      <h3>HTML</h3>
-      <CodeEditor value={html} onChange={(value) => setHtml(value)} language="html" />
+    <div className='container'>
+      <div className='tabs'>
+        <button>HTML</button>
+        <button>CSS</button>
+        <button>JavaScript</button>
+      </div>
+      <div className='code-editor-container'>
+        <CodeEditor value={html} onChange={(value) => setHtml(value)} language="html" />
+      </div>
     </div>
   );
 }
