@@ -1,8 +1,15 @@
-import React from 'react'
+import React from 'react';
+import MonacoEditor from '@monaco-editor/react';
 
-const CodeEditor = () => {
+const CodeEditor = ({editorHeight,language,value,onChange}) => {
   return (
-    <div>CodeEditor</div>
+    <MonacoEditor
+     height='40vw'
+     language={language}
+     theme='vs-dark'
+     value={value}
+    
+    />
   )
 }
 
