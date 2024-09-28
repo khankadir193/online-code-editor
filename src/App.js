@@ -21,8 +21,7 @@ function App() {
         return <CodeEditor value={html} onChange={(value) => setHtml(value)} language="html" />
     }
   }
-
-
+  
   return (
     <div className='container'>
       <div className='tabs'>
