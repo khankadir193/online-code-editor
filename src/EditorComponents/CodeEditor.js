@@ -8,7 +8,7 @@ const CodeEditor = ({editorHeight,language,value,onChange}) => {
      language={language}
      theme='vs-dark'
      value={value}
-     width='90vw'
+    //  width='85vw'
     
     />
   )

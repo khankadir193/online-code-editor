@@ -11,7 +11,31 @@
   display: flex;
   flex-direction: column;
   padding: 1vw;
-  background-color: #df1919;
+  /* background-color: #df1919; */
   color: rgb(0, 255, 4);
   border-radius: 2vw;
+  justify-content: space-evenly;
+  height: 20vw;
+}
+.tabs button{
+  /* color: white; */
+  background: #e0e0e0;
+  border-radius: 1vw;
+  border: 1px solid purple;
+  padding: 1vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  transition: background-color 0.3s;
+}
+
+.tabs button:hover{
+    background-color: #d0d0d0; /* Change background on hover */
+}
+
+.code-editor-container{
+  flex: 1; /* Take remaining space */
+  /* padding: 20px; Optional: Padding around the editor */
+  background-color: #fff; /* Background color for the editor */
+  overflow: auto; /* Scroll if content overflows */
 }
