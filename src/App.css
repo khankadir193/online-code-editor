@@ -1,42 +1,69 @@
-.container{
+/* Main container for editor and preview */
+.container {
   display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-family: Arial, sans-serif;
   height: 100vh;
-  margin: 1vw;
-  /* flex-direction: column; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* align-items: center; */
+  background-color: #282c34; /* Dark background for overall layout */
 }
 
-.tabs{
+/* Tab button styles */
+.tabs {
   display: flex;
   flex-direction: column;
-  padding: 1vw;
-  /* background-color: #df1919; */
-  color: rgb(0, 255, 4);
-  border-radius: 2vw;
-  justify-content: space-evenly;
-  height: 20vw;
+  margin-right: 10px;
 }
-.tabs button{
-  /* color: white; */
-  background: #e0e0e0;
-  border-radius: 1vw;
-  border: 1px solid purple;
-  padding: 1vw;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+.tabs button {
+  background-color: #ffffff; /* White background for inactive tabs */
+  color: #000;               /* Black text for readability */
+  border: 2px solid #5c0ab0; /* Border for differentiation */
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
   font-weight: bold;
-  font-style: italic;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.tabs button:hover{
-    background-color: #d0d0d0; /* Change background on hover */
+/* Active tab styles */
+.tabs button.active {
+  background-color: #5c0ab0; /* Purple background for active tab */
+  color: #fff;               /* White text for active tab */
 }
 
-.code-editor-container{
-  flex: 1; /* Take remaining space */
-  /* padding: 20px; Optional: Padding around the editor */
-  background-color: #fff; /* Background color for the editor */
-  overflow: auto; /* Scroll if content overflows */
+.tabs button:hover {
+  background-color: #7d33e8; /* Hover effect for tabs */
+  color: #fff;
+}
+
+/* Code editor container */
+.code-editor-container {
+  width: 60%;                /* Take up majority of the screen width */
+  margin-right: 20px;
+}
+
+.code-editor-container .monaco-editor {
+  border: 2px solid #5c0ab0;  /* Border to match the tab buttons */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Preview container */
+.preview-container {
+  width: 35%;                /* Remaining space for live preview */
+  background-color: #f4f8ff;  /* Light blue background for preview */
+  padding: 20px;
+  border: 2px solid #5c0ab0;  /* Same border as editor for consistency */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.preview-container h1 {
+  color: #000;
+}
+
+.preview-container p {
+  color: #000;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import MonacoEditor from '@monaco-editor/react';
-
+import '../App.css';
 const CodeEditor = ({language,value,onChange}) => {
   return (
     <MonacoEditor

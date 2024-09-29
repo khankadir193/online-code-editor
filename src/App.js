@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import CodeEditor from './EditorComponents/CodeEditor';
 import { useState } from 'react';
-import Preview from './EditorComponents/PreviewContainer';
+import PreviewContainer from './EditorComponents/PreviewContainer';
 
 function App() {
   const [html, setHtml] = useState('<h1>Abdul Kadir Khan</h1>');
@@ -34,7 +34,7 @@ function App() {
       <div className='code-editor-container'>
         {renderEditor()}
       </div>
-     <Preview css={css} html={html} javascript={javascript} /> 
+     <PreviewContainer css={css} html={html} javascript={javascript} /> 
     </div>
   );
 }
