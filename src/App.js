@@ -2,13 +2,15 @@ import logo from './logo.svg';
 import './App.css';
 import CodeEditor from './EditorComponents/CodeEditor';
 import { useState } from 'react';
+import Preview from './EditorComponents/PreviewContainer';
 
 function App() {
-  const [html, setHtml] = useState('<h1>Hello World</h1>');
+  const [html, setHtml] = useState('<h1>Abdul Kadir Khan</h1>');
   const [css, setCss] = useState('body { background-color: lightblue; }');
   const [javascript, setJavaScript] = useState('console.log("Hello World");');
   const [activeTab, setActiveTab] = useState('html'); // Default active tab is 'html'
-
+  // Combined HTML, CSS, and JavaScript for preview
+  
   const renderEditor = () => {
     switch (activeTab) {
       case 'html':
@@ -21,7 +23,7 @@ function App() {
         return <CodeEditor value={html} onChange={(value) => setHtml(value)} language="html" />
     }
   }
-  
+
   return (
     <div className='container'>
       <div className='tabs'>
@@ -32,6 +34,7 @@ function App() {
       <div className='code-editor-container'>
         {renderEditor()}
       </div>
+     <Preview css={css} html={html} javascript={javascript} /> 
     </div>
   );
 }
