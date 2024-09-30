@@ -10,7 +10,7 @@ function App() {
   const [javascript, setJavaScript] = useState('console.log("Hello World");');
   const [activeTab, setActiveTab] = useState('html'); // Default active tab is 'html'
   // Combined HTML, CSS, and JavaScript for preview
-  
+
   const renderEditor = () => {
     switch (activeTab) {
       case 'html':
@@ -26,17 +26,17 @@ function App() {
 
   return (
     <>
-    <div className='tabs'>
+      <div className='tabs'>
         <button onClick={() => { setActiveTab('html') }}>HTML</button>
         <button onClick={() => { setActiveTab('css') }}>CSS</button>
         <button onClick={() => { setActiveTab('js') }}>JavaScript</button>
       </div>
-    <div className='container'>
-      <div className='code-editor-container'>
-        {renderEditor()}
-      </div>
-     <PreviewContainer css={css} html={html} javascript={javascript} /> 
-    </div></>
+      <div className='container'>
+        <div className='code-editor-container'>
+          {renderEditor()}
+        </div>
+        <PreviewContainer css={css} html={html} javascript={javascript} />
+      </div></>
   );
 }
 
