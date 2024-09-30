@@ -10,22 +10,39 @@
 
 /* Tab button styles */
 .tabs {
-  display: flex;
-  flex-direction: column;
-  margin-right: 10px;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* margin-right: 10px; */
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 8px;
 }
 
 .tabs button {
-  background-color: #ffffff; /* White background for inactive tabs */
-  color: #000;               /* Black text for readability */
-  border: 2px solid #5c0ab0; /* Border for differentiation */
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /* padding: 14px 16px; */
+  padding: 12px 68px 12px 68px;
+  transition: 0.3s;
+  font-size: 17px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* .tabs button {
+  background-color: #ffffff; 
+  color: #000;
+  border: 2px solid #5c0ab0;
   padding: 10px;
   margin: 5px 0;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
-}
+} */
 
 /* Active tab styles */
 .tabs button.active {
@@ -34,7 +51,7 @@
 }
 
 .tabs button:hover {
-  background-color: #7d33e8; /* Hover effect for tabs */
+  background-color: #a80732; /* Hover effect for tabs */
   color: #fff;
 }
 

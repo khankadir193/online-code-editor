@@ -25,17 +25,18 @@ function App() {
   }
 
   return (
-    <div className='container'>
-      <div className='tabs'>
+    <>
+    <div className='tabs'>
         <button onClick={() => { setActiveTab('html') }}>HTML</button>
         <button onClick={() => { setActiveTab('css') }}>CSS</button>
         <button onClick={() => { setActiveTab('js') }}>JavaScript</button>
       </div>
+    <div className='container'>
       <div className='code-editor-container'>
         {renderEditor()}
       </div>
      <PreviewContainer css={css} html={html} javascript={javascript} /> 
-    </div>
+    </div></>
   );
 }
 
